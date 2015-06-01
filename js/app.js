@@ -16,15 +16,21 @@ congressApp.populateStates = function(){
 
 congressApp.getState = function(search){
   var params = {
-    id: stateAbrv,
-    apikey: "037d0087348c68b5e9cca9d06f405461",
-    output: "json"
+    id:search,
+    apikey:"037d0087348c68b5e9cca9d06f405461",
+    output:"json"
   };
 
-  url = "http://www.opensecrets.org/api/?method=getLegislators";
+  var url = "http://www.opensecrets.org/api/?method=getLegislators";
 
-  $.getJSON(url, params, function(response){
-    console.log(response);
+  var response = $.ajax({
+    type: 'GET',
+    url: url,
+    data: params,
+    dataType: 'jsonp'
+  })
+  .done(function(result){
+    console.log(result);
   })
   .fail(function(){
     console.log('fail');
