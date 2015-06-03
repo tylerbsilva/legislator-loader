@@ -37,6 +37,7 @@ tagSearch.populateImages = function(resultArray) {
   $(".resultsList").append(html);
 };
 
+// Remove Hash symbol from
 tagSearch.removeHashtag = function(searchTerm){
   if(searchTerm.charAt(0) == "#" || searchTerm.charAt(0) == "&#35;"){
     searchTerm = searchTerm.substr(1);
@@ -45,6 +46,8 @@ tagSearch.removeHashtag = function(searchTerm){
     return searchTerm;
   }
 };
+
+// Add spaces to tags if one long sequence
 
 // When document loads, show this function
 $(document).ready(function() {

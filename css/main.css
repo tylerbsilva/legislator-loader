@@ -12,7 +12,6 @@
 }
 ::-webkit-scrollbar-track {
   border-radius: 5px;
-  background-color: #FFDCB5;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
@@ -129,5 +128,10 @@ blockquote {
   li {
     width: 95%;
     margin: 2.5%;
+    height: auto;
   }
+  blockquote {
+    overflow-y: auto;
+  }
+  /*change overflow to auto and no vertical scroll bar*/
 }
