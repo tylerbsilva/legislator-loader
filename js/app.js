@@ -1,20 +1,9 @@
+// API KEY: 357dd76e8bb5452e888dfca32bcae0db
+
 // Initialize app as object
-var congressApp = {};
+var tagSearch = {};
 
-// State Array
-congressApp.states = ["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID", "IL","IN","KS","KY","LA","MA","MD","ME","MH","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY", "OH","OK","OR","PA","PR","PW","RI","SC","SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY"];
-
-// Load States into DOM
-congressApp.populateStates = function(){
-  var html = "";
-  $.each(congressApp.states, function(index, item){
-    html += "<option>" + item + "</option>";
-  });
-  $('#states').html(html);
-};
-
-
-congressApp.getState = function(search){
+tagSearch.getState = function(search){
   var params = {
     id:search,
     apikey:"037d0087348c68b5e9cca9d06f405461",

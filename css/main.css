@@ -1,4 +1,5 @@
 * {
+  font-family: 'Oswald', sans-serif;
 }
 
 header {
@@ -6,13 +7,18 @@ header {
   background-color: #C69C6D;
   width: 100%;
   height:auto;
+  padding: 10px;
 }
 
 header h1 {
-  margin: 0 auto;
+  position: relative;
+  margin: .25em auto;
   font-family: 'Lobster', cursive;
-  color:
+  font-size: 3rem;
+  color: #603813;
 }
+
+
 
 ul {
   margin: 10px auto;
@@ -28,6 +34,20 @@ li {
   list-style: none;
   margin: 2.5%;
   float: left;
+  border-radius: 5px;
+  box-shadow: 0 3px 0 #603813;
+}
+
+#tagSubmission,
+#tagSubmission:active,
+#tagSubmission:focus {
+  outline: none;
+  border: 0;
+  padding: 5px;
+  background-color: #FFDCB5;
+  color: #603813;
+  border-radius: 5px;
+  font-weight: 700;
 }
 
 .center {
