@@ -6,6 +6,8 @@ tagSearch.getTags = function(search) {
     count: 20,
   };
 
+  search = tagSearch.removeHashtag(search);
+
   var url = "https://api.instagram.com/v1/tags/" + search + "/media/recent?client_id=357dd76e8bb5452e888dfca32bcae0db";
 
   var response = $.ajax({
@@ -33,6 +35,15 @@ tagSearch.populateImages = function(resultArray) {
     html += "</li>";
   });
   $(".resultsList").append(html);
+};
+
+tagSearch.removeHashtag = function(searchTerm){
+  if(searchTerm.charAt(0) == "#" || searchTerm.charAt(0) == "&#35;"){
+    searchTerm = searchTerm.substr(1);
+    return searchTerm;
+  } else {
+    return searchTerm;
+  }
 };
 
 // When document loads, show this function
