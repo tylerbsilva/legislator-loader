@@ -1,16 +1,12 @@
-// API KEY: 357dd76e8bb5452e888dfca32bcae0db
-
 // Initialize app as object
 var tagSearch = {};
 
-tagSearch.getState = function(search){
+tagSearch.getTags = function(search){
   var params = {
-    id:search,
-    apikey:"037d0087348c68b5e9cca9d06f405461",
-    output:"json"
+    count: 20,
   };
 
-  var url = "http://www.opensecrets.org/api/?method=getLegislators";
+  var url = "https://api.instagram.com/v1/tags/"+search+"/media/recent?client_id=357dd76e8bb5452e888dfca32bcae0db";
 
   var response = $.ajax({
     type: 'GET',
@@ -19,21 +15,31 @@ tagSearch.getState = function(search){
     dataType: 'jsonp'
   })
   .done(function(result){
-    console.log(result);
+    console.log(result.data);
   })
   .fail(function(){
     console.log('fail');
   });
 };
 
-$('#get-state-leg').submit(function(event){
+tagSearch.populateImages = function(resultArray){
+  var html = "";
+  $.each(resultArray, function(index, element){
+    html += "<li>";
+    html += "<img src='" + element.images.standard_resolution.url + "' alt='" + element.caption.text + "' />";
+    html += "<q>" + element.caption.text + "</q>";
+    html += "<a href='http://instagram.com/" + element.user.username + "'><h3>" + element.user.full_name + "</h3></a>";
+  });
+};
+
+$('#get-tag').submit(function(event){
   event.preventDefault();
-  var search = $('#states').val();
-  congressApp.getState(search);
+  var search = $('#tagSubmission').val();
+  tagSearch.getTags(search);
 });
 
 
 // When document loads, show this function
 $(document).ready(function(){
-  congressApp.populateStates();
+
 });
