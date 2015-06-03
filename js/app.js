@@ -29,7 +29,7 @@ tagSearch.populateImages = function(resultArray){
     html += "<li>";
     html += "<img src='" + element.images.standard_resolution.url + "' alt='" + element.caption.text + "' />";
     html += "<blockquote>" + element.caption.text + "</blockquote>";
-    html += "<a href='http://instagram.com/" + element.user.username + "'><h3>" + element.user.username + "</h3></a>";
+    html += "<a href='http://instagram.com/" + element.user.username + "'><h3>&#64;" + element.user.username + "</h3></a>";
     html += "</li>";
   });
   $(".resultsList").append(html);
