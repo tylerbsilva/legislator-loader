@@ -95,7 +95,7 @@ blockquote {
   margin: 0;
   padding: 0;
   position: relative;
-  font-size: 12px;
+  font-size: 15px;
   line-height: auto;
   height: 100px;
   overflow-y: scroll;
@@ -133,4 +133,25 @@ blockquote {
 .center {
   margin: 0 auto;
   background-color: transparent;
+}
+
+@media only screen and (max-width: 1000px) {
+  li {
+    width: 28%;
+    margin: 2.5%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  li {
+    width: 45%;
+    margin: 2.5%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  li {
+    width: 95%;
+    margin: 2.5%;
+  }
 }
