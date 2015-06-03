@@ -8,13 +8,15 @@
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: none;
+  background-color: #FFDCB5;
 }
 ::-webkit-scrollbar-track {
   border-radius: 5px;
+  background-color: #FFDCB5;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
+  background-color: #FFDCB5;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25);
 }
 header {
