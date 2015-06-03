@@ -2,26 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Legislator Loader</title>
+  <title>Instagram Tag Searcher</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Lobster|Oswald:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/app.js"></script>
 </head>
 <body>
   <header>
-    <h1>Find your Representatives</h1>
-    <p>Use this tool to find the information to get in touch with your representatives in Congress.</p>
-    <form id="get-state-leg">
-      <select name="States" id="states">
-      </select>
-      <button type="submit">GO</button>
-    </form>
+    <div class="center">
+      <h1>Tag Searcher</h1>
+      <form id="get-tag">
+        <input name="tag" id="tagSubmission" value="#TAGSEARCH">
+        <button type="submit">GO</button>
+      </form>
+    </div>
   </header>
-  <section class="legislators">
-    <ul class="house">
-    </ul>
-    <ul class="senate">
+  <section class="results">
+    <ul class="resultsList">
+      <li>
+      </li>
+      <li>
+      </li>
+      <li>
+      </li>
+      <li>
+      </li>
     </ul>
   </section>
 </body>

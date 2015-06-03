@@ -1,0 +1,35 @@
+* {
+}
+
+header {
+  display: flex;
+  background-color: #C69C6D;
+  width: 100%;
+  height:auto;
+}
+
+header h1 {
+  margin: 0 auto;
+  font-family: 'Lobster', cursive;
+  color:
+}
+
+ul {
+  margin: 10px auto;
+  padding: 0;
+  width: 100%;
+  max-width: 960px;
+}
+
+li {
+  width: 20%;
+  height: 300px;
+  background-color: #FFDCB5;
+  list-style: none;
+  margin: 2.5%;
+  float: left;
+}
+
+.center {
+  margin: 0 auto;
+}
