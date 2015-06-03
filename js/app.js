@@ -28,7 +28,7 @@ tagSearch.populateImages = function(resultArray){
   $.each(resultArray, function(index, element){
     html += "<li>";
     html += "<img src='" + element.images.standard_resolution.url + "' alt='" + element.caption.text + "' />";
-    html += "<q>" + element.caption.text + "</q>";
+    html += "<blockquote>" + element.caption.text + "</blockquote>";
     html += "<a href='http://instagram.com/" + element.user.username + "'><h3>" + element.user.username + "</h3></a>";
     html += "</li>";
   });
@@ -39,7 +39,7 @@ tagSearch.populateImages = function(resultArray){
 $(document).ready(function(){
   $('#get-tag').submit(function(event){
     event.preventDefault();
-    $('#resultsList').val("");
+    $('.resultsList').empty();
     var search = $('#tagSubmission').val();
     $('#tagSubmission').val("");
     tagSearch.getTags(search);
