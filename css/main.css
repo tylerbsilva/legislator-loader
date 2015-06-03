@@ -81,6 +81,7 @@ blockquote {
   font-size: 15px;
   line-height: auto;
   height: 100px;
+  word-wrap:break-word;
   overflow-y: scroll;
   background-color: transparent;
 }
