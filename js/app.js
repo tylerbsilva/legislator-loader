@@ -15,7 +15,8 @@ tagSearch.getTags = function(search){
     dataType: 'jsonp'
   })
   .done(function(result){
-    console.log(result.data);
+    //console.log(result.data);
+    tagSearch.populateImages(result.data);
   })
   .fail(function(){
     console.log('fail');
@@ -28,18 +29,19 @@ tagSearch.populateImages = function(resultArray){
     html += "<li>";
     html += "<img src='" + element.images.standard_resolution.url + "' alt='" + element.caption.text + "' />";
     html += "<q>" + element.caption.text + "</q>";
-    html += "<a href='http://instagram.com/" + element.user.username + "'><h3>" + element.user.full_name + "</h3></a>";
+    html += "<a href='http://instagram.com/" + element.user.username + "'><h3>" + element.user.username + "</h3></a>";
+    html += "</li>";
   });
+  $(".resultsList").append(html);
 };
-
-$('#get-tag').submit(function(event){
-  event.preventDefault();
-  var search = $('#tagSubmission').val();
-  tagSearch.getTags(search);
-});
-
 
 // When document loads, show this function
 $(document).ready(function(){
-
+  $('#get-tag').submit(function(event){
+    event.preventDefault();
+    $('#resultsList').val("");
+    var search = $('#tagSubmission').val();
+    $('#tagSubmission').val("");
+    tagSearch.getTags(search);
+  });
 });

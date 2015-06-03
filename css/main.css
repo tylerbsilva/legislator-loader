@@ -1,5 +1,6 @@
 * {
   font-family: 'Oswald', sans-serif;
+  box-sizing: border-box;
 }
 
 header {
@@ -27,13 +28,29 @@ ul {
 
 li {
   width: 20%;
-  height: 300px;
+  height: auto;
   background-color: #FFDCB5;
   list-style: none;
+  padding: 10px;
   margin: 2.5%;
   float: left;
   border-radius: 5px;
   box-shadow: 0 3px 0 #603813;
+}
+
+li img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+li a {
+  font-size: 12px;
+}
+
+q {
+  font-size: 12px;
+  line-height: auto;
 }
 
 #tagSubmission,
