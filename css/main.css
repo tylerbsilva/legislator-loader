@@ -61,6 +61,9 @@ li img {
   position: relative;
   width: 100%;
   height: auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 0 #603813;
+  margin-bottom: 10px;
 }
 
 li a {
