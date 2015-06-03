@@ -132,7 +132,7 @@ blockquote {
   }
   blockquote {
     height: auto;
-    overflow-y: auto;
+    overflow: none;
   }
   /*change overflow to auto and no vertical scroll bar*/
 }
