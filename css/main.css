@@ -73,6 +73,9 @@ h3 {
   font-family: 'Lobster', cursive;
   background-color: transparent;
 }
+p{
+  text-align: center;
+}
 blockquote {
   width: 100%;
   margin: 0;

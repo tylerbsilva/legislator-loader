@@ -18,7 +18,8 @@ tagSearch.getTags = function(search) {
       tagSearch.populateImages(result.data);
     })
     .fail(function(response) {
-      tagSearch.failed(response.error_message);
+      //console.log(response);
+      tagSearch.failed(response.status);
     });
 };
 
@@ -51,7 +52,7 @@ tagSearch.removeHashtag = function(searchTerm) {
 
 // display error message if failed
 tagSearch.failed = function(error){
-  var html = "<p>I'm sorry, we're experienceing issues with Instagram right now</p><p>Message: " + error + "</p>";
+  var html = "<p>I'm sorry, we're experienceing issues with Instagram right now!</p><p>Message: " + error + "</p>";
   $(".resultsList").append(html);
 };
 
